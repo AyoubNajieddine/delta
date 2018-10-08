@@ -1,0 +1,45 @@
+package com.delta.model;
+
+import javax.persistence.*;
+
+@Entity
+public class User implements Serializable {
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Integer id;
+    private String email;
+    private String password;
+    private LocalDate last_login;
+    private LocalDate last_update;
+    private Integer groupId;
+
+    public User(){
+
+    }
+    public Integer getId(){
+	return id;
+    }
+    public String getEmail(){
+	return email;
+    }
+    public String getPassword(){
+	return password;
+    }
+    public LocalDate getLastLogin(){
+	return last_login;
+    }
+    public LocalDate getLastUpdate(){
+	return last_update;
+    }
+    public Integer getPriv(){
+	return priv;
+    }
+
+    public void setEmail(String email) { this.email = email;}
+    public void setPassword(String pasword) {this.password = password;}
+    public void setPriv(){this.priv = priv;}
+    public void setLastLogin(LocalDate last_login){this.last_login = last_login;}
+    public void setLastUpdate(LocalDate last_update){this.last_update=last_update;}
+
+    
+}
